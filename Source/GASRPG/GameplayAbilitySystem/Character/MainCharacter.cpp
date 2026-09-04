@@ -4,8 +4,8 @@
 #include "MainCharacter.h"
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
-#include "AttributeSets/AttributeSetCharacter.h"
-#include "PlayerStateMiniGame.h"
+#include "GASRPG/GameplayAbilitySystem/AttributeSets/AttributeSetCharacter.h"
+#include "GASRPG/GameplayAbilitySystem/Framework/PlayerStateMiniGame.h"
 #include "AbilitySystemComponent.h"
 
 // Sets default values

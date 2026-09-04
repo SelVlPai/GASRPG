@@ -3,7 +3,7 @@
 
 #include "PlayerStateMiniGame.h"
 #include "AbilitySystemComponent.h"
-#include "AttributeSets/AttributeSetCharacter.h"
+#include "GASRPG/GameplayAbilitySystem/AttributeSets/AttributeSetCharacter.h"
 #include "Net/UnrealNetwork.h"
 APlayerStateMiniGame::APlayerStateMiniGame()
 {

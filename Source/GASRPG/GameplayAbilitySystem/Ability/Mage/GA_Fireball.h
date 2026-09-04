@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GA_Base.h"
+#include "GASRPG/GameplayAbilitySystem/Ability/GA_Base.h"
 #include "GA_Fireball.generated.h"
 
 class AFireballProjectile;

@@ -3,28 +3,29 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GA_Base.h"
-#include "GA_GroundSlam.generated.h"
+#include "GASRPG/GameplayAbilitySystem/Ability/GA_Base.h"
+#include "GA_Fortify.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class GASRPG_API UGA_GroundSlam : public UGA_Base
+class GASRPG_API UGA_Fortify : public UGA_Base
 {
 	GENERATED_BODY()
 public:
+
 	virtual void OnActivateAbility(const FGameplayAbilitySpecHandle SpecHandle, const FGameplayAbilityActorInfo* ActorInfo,
 		const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData) override;
+
 protected:
+
 	UPROPERTY(EditDefaultsOnly, Category = "Effect")
-	TSubclassOf<UGameplayEffect> SlowEffect;
+	TSubclassOf<UGameplayEffect> FotifieldEffect;
 	UPROPERTY(EditDefaultsOnly, Category = "Combat")
-	float SlamRadius = 200.f;
-	UPROPERTY(EditDefaultsOnly, Category = "Combat")
-	float LaunchStrength = 800.f;
-	UPROPERTY(EditDefaultsOnly, Category = "Combat")
-	float LaunchZStrength = 400.f;
+	float AuraRadius = 500.f;
+
 private:
-	void LaunchTarget(ACharacter* Target, FVector SlamLocation);
+
+	TArray<ACharacter*> FindAllies() const;
 };

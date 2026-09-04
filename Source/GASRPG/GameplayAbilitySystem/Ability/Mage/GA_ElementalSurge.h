@@ -3,27 +3,21 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GA_Base.h"
-#include "GA_WarCry.generated.h"
+#include "GASRPG/GameplayAbilitySystem/Ability/GA_Base.h"
+#include "GA_ElementalSurge.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class GASRPG_API UGA_WarCry : public UGA_Base
+class GASRPG_API UGA_ElementalSurge : public UGA_Base
 {
 	GENERATED_BODY()
 public:
-
 	virtual void OnActivateAbility(const FGameplayAbilitySpecHandle SpecHandle, const FGameplayAbilityActorInfo* ActorInfo,
 		const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData) override;
-
 protected:
-
 	UPROPERTY(EditDefaultsOnly, Category = "Effect")
-	TSubclassOf<UGameplayEffect> WarCryEffect;
-	UPROPERTY(EditDefaultsOnly, Category = "Combat")
-	float Radius = 800.f;
-private:
-	TArray<ACharacter*> FindAliies()const;
+	TSubclassOf<UGameplayEffect> SurgeEffect;
+	
 };

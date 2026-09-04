@@ -4,7 +4,7 @@
 #include "GA_Base.h"
 #include "AbilitySystemComponent.h"
 #include "AbilitySystemBlueprintLibrary.h"
-#include "GASRPG/GameplayAbilitySystem/PDA_DefaultEffects.h"
+#include "GASRPG/GameplayAbilitySystem/Data/PDA_DefaultEffects.h"
 #include "GameFramework/Character.h"
 #include "GASRPG/GameplayAbilitySystem/AttributeSets/AttributeSetCharacter.h"
 

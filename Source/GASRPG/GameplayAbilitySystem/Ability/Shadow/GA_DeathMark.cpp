@@ -7,6 +7,7 @@
 #include <AbilitySystemBlueprintLibrary.h>
 #include "AbilitySystemComponent.h"
 
+
 void UGA_DeathMark::OnActivateAbility(const FGameplayAbilitySpecHandle SpecHandle, const FGameplayAbilityActorInfo* ActorInfo,
     const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData)
 {

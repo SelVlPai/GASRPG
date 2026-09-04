@@ -3,29 +3,32 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GA_Base.h"
-#include "GA_Fortify.generated.h"
+#include "GASRPG/GameplayAbilitySystem/Ability/GA_Base.h"
+#include "GA_ShieldBash.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class GASRPG_API UGA_Fortify : public UGA_Base
+class GASRPG_API UGA_ShieldBash : public UGA_Base
 {
 	GENERATED_BODY()
+	
 public:
-
 	virtual void OnActivateAbility(const FGameplayAbilitySpecHandle SpecHandle, const FGameplayAbilityActorInfo* ActorInfo,
 		const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData) override;
-
 protected:
-
 	UPROPERTY(EditDefaultsOnly, Category = "Effect")
-	TSubclassOf<UGameplayEffect> FotifieldEffect;
+	TSubclassOf<UGameplayEffect> StunEffect;
+	UPROPERTY(EditDefaultsOnly, Category = "Effect")
+	TSubclassOf<UGameplayEffect> VulnerableEffect;
+	UPROPERTY(EditDefaultsOnly, Category = "Effect")
+	float StunDuration = 0.8f;
 	UPROPERTY(EditDefaultsOnly, Category = "Combat")
-	float AuraRadius = 500.f;
-
+	float BashRange = 200.f;
+	UPROPERTY(EditDefaultsOnly, Category = "Combat")
+	float BashRadius = 200.f;
 private:
+	ACharacter* FindTarget();
 
-	TArray<ACharacter*> FindAllies() const;
 };

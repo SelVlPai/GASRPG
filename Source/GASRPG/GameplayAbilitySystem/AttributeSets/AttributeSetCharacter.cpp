@@ -8,9 +8,9 @@
 #include "GameplayEffectExtension.h"
 #include "Engine/OverlapResult.h"
 #include <GameplayEffectComponents/TargetTagsGameplayEffectComponent.h>
-#include <GASRPG/GameplayAbilitySystem/MainCharacter.h>
-#include "GASRPG/GameplayAbilitySystem/PlayerStateMiniGame.h"
-#include "GASRPG/GameplayAbilitySystem/MainGameMode.h"
+#include <GASRPG/GameplayAbilitySystem/Character/MainCharacter.h>
+#include "GASRPG/GameplayAbilitySystem/Framework/PlayerStateMiniGame.h"
+#include "GASRPG/GameplayAbilitySystem/Framework/MainGameMode.h"
 
 UAttributeSetCharacter::UAttributeSetCharacter()
 {

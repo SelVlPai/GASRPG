@@ -3,26 +3,28 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GA_Base.h"
-#include "GA_DeathMark.generated.h"
+#include "GASRPG/GameplayAbilitySystem/Ability/GA_Base.h"
+#include "GA_GroundSlam.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class GASRPG_API UGA_DeathMark : public UGA_Base
+class GASRPG_API UGA_GroundSlam : public UGA_Base
 {
 	GENERATED_BODY()
-	
 public:
-
 	virtual void OnActivateAbility(const FGameplayAbilitySpecHandle SpecHandle, const FGameplayAbilityActorInfo* ActorInfo,
 		const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData) override;
-private:
-	ACharacter* FindTarget() const;
 protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Effect")
-	TSubclassOf<UGameplayEffect> DeathMark;
+	TSubclassOf<UGameplayEffect> SlowEffect;
 	UPROPERTY(EditDefaultsOnly, Category = "Combat")
-	float MarkRange = 1500.f;
+	float SlamRadius = 200.f;
+	UPROPERTY(EditDefaultsOnly, Category = "Combat")
+	float LaunchStrength = 800.f;
+	UPROPERTY(EditDefaultsOnly, Category = "Combat")
+	float LaunchZStrength = 400.f;
+private:
+	void LaunchTarget(ACharacter* Target, FVector SlamLocation);
 };

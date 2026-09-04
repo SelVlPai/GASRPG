@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Abilities/GameplayAbility.h"
-#include "GA_Base.h"
+#include "GASRPG/GameplayAbilitySystem/Ability/GA_Base.h"
 #include "GA_ShadowStep.generated.h"
 
 class UAbilityTask_PlayMontageAndWait;

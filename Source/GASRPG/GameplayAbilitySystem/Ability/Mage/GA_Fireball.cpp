@@ -5,7 +5,7 @@
 #include <Camera/CameraComponent.h>
 #include "GameFramework/Character.h"
 #include "AbilitySystemComponent.h"
-#include "GASRPG/GameplayAbilitySystem/FireballProjectile.h"
+#include "GASRPG/GameplayAbilitySystem/Ability/Mage/FireballProjectile.h"
 
 void UGA_Fireball::OnActivateAbility(const FGameplayAbilitySpecHandle SpecHandle, const FGameplayAbilityActorInfo* ActorInfo,
 	const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData)
